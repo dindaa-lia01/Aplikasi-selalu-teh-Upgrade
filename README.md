@@ -58,11 +58,11 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
 
   Aplikasi menampilkan seluruh daftar menu minuman dalam bentuk grid/katalog pada halaman utama lengkap dengan informasi detailnya.
 
-  <img width="400" height="700" alt="read" src="https://github.com/user-attachments/assets/08e349f2-a87e-42c4-bf41-0ceb38cd648b" />
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/b7aeb5c87293f776392ebcf1cace5e5284cb7c5d/Screenshot%202026-03-15%20142453.png" width="400" height="700">
 
 - Mengedit data minuman yang sudah ada (Update)
 
-  Pengguna dapat mengubah data minuman yang sudah ada melalui butoon _edit_. Data lama akan ditampilkan kembali di form, lalu dapat diperbarui sesuai kebutuhan.
+  Pengguna dapat mengubah data minuman yang sudah ada melalui button _edit_. Data lama akan ditampilkan kembali di form, lalu dapat diperbarui sesuai kebutuhan.
 
   Sebelum data harga di update:
 
