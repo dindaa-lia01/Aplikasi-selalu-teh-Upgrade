@@ -35,16 +35,15 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Selalu Teh',
 
-      /// LIGHT MODE (KAYAK TAMPILAN AWALMU)
       theme: ThemeData(
         brightness: Brightness.light,
 
         primaryColor: Colors.teal.shade700,
 
-        scaffoldBackgroundColor: Colors.teal.shade50, // background ijo muda
+        scaffoldBackgroundColor: Colors.teal.shade50, 
 
         appBarTheme: AppBarTheme(
-          backgroundColor: Colors.teal.shade700, // header ijo tua
+          backgroundColor: Colors.teal.shade700, 
           foregroundColor: Colors.white,
           centerTitle: true,
         ),
@@ -63,7 +62,6 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
 
-      /// DARK MODE
       darkTheme: ThemeData(
         brightness: Brightness.dark,
 
