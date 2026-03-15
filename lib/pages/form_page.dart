@@ -82,7 +82,7 @@ class _FormPageState extends State<FormPage> {
 
           child: ListView(
             children: [
-              /// NAMA
+              
               TextFormField(
                 controller: nameController,
                 decoration: const InputDecoration(
@@ -105,7 +105,7 @@ class _FormPageState extends State<FormPage> {
 
               const SizedBox(height: 16),
 
-              /// HARGA
+              
               TextFormField(
                 controller: priceController,
                 keyboardType: TextInputType.number,
@@ -129,7 +129,7 @@ class _FormPageState extends State<FormPage> {
 
               const SizedBox(height: 16),
 
-              /// LEVEL GULA
+              
               DropdownButtonFormField<String>(
                 value: selectedSugar,
 
@@ -158,7 +158,7 @@ class _FormPageState extends State<FormPage> {
 
               const SizedBox(height: 16),
 
-              /// URL GAMBAR
+            
               TextFormField(
                 controller: imageController,
 
