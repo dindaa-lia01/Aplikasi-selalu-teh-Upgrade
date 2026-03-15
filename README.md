@@ -4,7 +4,7 @@ NIM: 2409116076
 
 Kelas: SI B'24
 
-# Selalu Teh Catalogue App ˚˖𓍢ִ໋🌷͙֒✧˚.🎀༘⋆
+# Selalu Teh Catalogue App (UPGRADE)˚˖𓍢ִ໋🌷͙֒✧˚.🎀༘⋆
 
 Aplikasi Selalu Teh merupakan aplikasi katalog menu minuman yang dibuat menggunakan framework Flutter. Aplikasi ini menampilkan daftar menu minuman dalam bentuk katalog yang berisi gambar, nama minuman, harga, dan level kemanisan.
 
@@ -78,8 +78,8 @@ Aplikasi ini berisi 5 fitur utama, yaitu Menambahkan data minuman baru, Menampil
 
   icon saat ingin berpindah ke dark mode
 
-  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/e85de5bbf59f8a253acf1f148e5322022b6527c0/SS%20Readme/ke%20dark%20mode.png" width="300" height="700">
-  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/a15b0ff50669f62b96f88eb867e4fb80546376c5/SS%20Readme/dark.png" width="400" height="500">
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/7d37947580982910a82c50872986c90ac1a77586/SS%20Readme/ke%20dark%20mode%20(2).png" width="300" height="700">
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/a15b0ff50669f62b96f88eb867e4fb80546376c5/SS%20Readme/dark.png" width="380" height="500">
 
   Icon saat ingin berpindah ke light mode
 
@@ -250,6 +250,8 @@ Aplikasi Selalu Teh menggunakan sistem navigasi untuk berpindah dari satu halama
    Navigator.push() juga digunakan untuk membuka FormPage dalam mode edit dengan membawa data minuman yang dipilih agar bisa diperbarui.
 
    <img width="490" height="149" alt="image" src="https://github.com/user-attachments/assets/d6b79caa-5392-41c2-9df1-74887af29dff" />
+
+# ᰔ SUPABASE 
 
 
 
