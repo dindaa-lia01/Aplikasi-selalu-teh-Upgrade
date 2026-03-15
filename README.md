@@ -259,7 +259,7 @@ Aplikasi Selalu Teh menggunakan sistem navigasi untuk berpindah dari satu halama
 
   Pada tahap awal pengembangan aplikasi, data menu yang ditampilkan pada aplikasi masih menggunakan list lokal yang dituliskan langsung di dalam kode program. Cara ini membuat data bersifat statis sehingga setiap perubahan data harus dilakukan dengan mengubah kode aplikasi terlebih dahulu. Setelah dilakukan integrasi dengan Supabase, data menu kini disimpan di dalam database online, sehingga aplikasi dapat mengambil data secara langsung dari database. Dengan demikian, proses pengelolaan data menjadi lebih fleksibel karena data dapat ditambahkan, diperbarui, maupun dihapus melalui database tanpa perlu melakukan perubahan pada kode program aplikasi.
 
-  <img width="490" height="149" alt="image" src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/372af771fb765658f718aa7d9932d06b93d6d25d/SS%20Readme/Database.png" />
+  <img alt="image" src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/372af771fb765658f718aa7d9932d06b93d6d25d/SS%20Readme/Database.png" />
 
 - Tampilan table editor
 
@@ -267,7 +267,7 @@ Aplikasi Selalu Teh menggunakan sistem navigasi untuk berpindah dari satu halama
 
   Selain itu, terdapat kolom image_url bertipe text yang digunakan untuk menyimpan alamat atau tautan gambar menu sehingga gambar dapat ditampilkan pada aplikasi. Kolom terakhir yaitu created_at dengan tipe data timestamp yang berfungsi untuk mencatat waktu ketika data tersebut dibuat atau ditambahkan ke dalam database. Dengan adanya struktur tabel ini, data yang disimpan menjadi lebih terorganisir dan mudah untuk diakses oleh aplikasi melalui integrasi Supabase. Hal ini membuat aplikasi Selalu Teh dapat menampilkan data menu secara dinamis karena data diambil langsung dari database yang telah dibuat.
 
-  <img width="490" height="149" alt="image" src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/372af771fb765658f718aa7d9932d06b93d6d25d/SS%20Readme/table%20editor.png" />
+  <img alt="image" src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/372af771fb765658f718aa7d9932d06b93d6d25d/SS%20Readme/table%20editor.png" />
 
 
 
