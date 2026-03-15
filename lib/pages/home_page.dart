@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
       ),
 
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        backgroundColor: Colors.white,
         child: const Icon(Icons.add),
         onPressed: () async {
           await Navigator.push(
