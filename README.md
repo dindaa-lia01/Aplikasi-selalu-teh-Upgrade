@@ -104,15 +104,15 @@ lib/
 ```
 
 Project dibagi menjadi 4 package utama:
-1. config
+### 1. config
 
    Folder ini berisi file konfigurasi yang bernama supabase_config.dart yang digunakan untuk menghubungkan aplikasi Flutter dengan database Supabase. Di dalamnya terdapat pengaturan seperti URL Supabase dan API Key yang diambil dari file .env, lalu digunakan untuk menginisialisasi koneksi database agar aplikasi bisa mengakses data.
 
-2. models
+### 2. models
 
-    Folder ini berisi model data yang digunakan dalam aplikasi. File drinks.dart mendefinisikan struktur data untuk menu minuman. Model ini berisi atribut seperti id, name, price, sugarLevel, dan imageUrl. Model ini juga memiliki fungsi untuk mengubah data dari format JSON ke objek Dart dan sebaliknya agar mudah digunakan dalam aplikasi.
+  Folder ini berisi model data yang digunakan dalam aplikasi. File drinks.dart mendefinisikan struktur data untuk menu minuman. Model ini berisi atribut seperti id, name, price, sugarLevel, dan imageUrl. Model ini juga memiliki fungsi untuk mengubah data dari format JSON ke objek Dart dan sebaliknya agar mudah digunakan dalam aplikasi.
     
-3. pages
+### 3. pages
     
    Folder ini berisi halaman tampilan (UI) yang dilihat dan digunakan oleh pengguna. terdapat beberapa file sebagai berikut:
     
@@ -120,7 +120,7 @@ Project dibagi menjadi 4 package utama:
    
      Halaman awal aplikasi yang menampilkan cover atau tampilan pembuka aplikasi “Selalu Teh”. Halaman ini berisi logo, nama aplikasi, dan tombol untuk masuk ke halaman utama.
     
-    - form_page.dart
+   - form_page.dart
     
       Halaman yang digunakan untuk menambah atau mengedit data menu minuman. Di halaman ini terdapat form input seperti nama minuman, harga, level manis, dan link gambar.
     
@@ -128,11 +128,11 @@ Project dibagi menjadi 4 package utama:
 
      Halaman utama aplikasi yang menampilkan daftar menu minuman yang diambil dari database Supabase. Pada halaman ini pengguna dapat melihat menu, mengedit data, menghapus data, dan menambah menu baru.
 
-4. services
+### 4. services
 
    Folder ini berisi logika pengolahan data atau komunikasi dengan database. File drink_service.dart berfungsi untuk menangani operasi CRUD (Create, Read, Update, Delete) terhadap data minuman di database Supabase. Dengan adanya service ini, pengambilan dan pengolahan data menjadi lebih terstruktur dan tidak langsung ditulis di halaman UI.
 
-5. main.dart
+### 5. main.dart
 
    File ini merupakan entry point atau titik awal saat aplikasi Flutter dijalankan. Di file ini dilakukan inisialisasi Supabase, pengaturan tema aplikasi (light mode dan dark mode), serta menjalankan aplikasi dengan memanggil halaman awal yaitu CoverPage.
    
@@ -233,19 +233,19 @@ Widget adalah komponen dasar dalam Flutter yang digunakan untuk membangun tampil
 
 Aplikasi Selalu Teh menggunakan sistem navigasi untuk berpindah dari satu halaman ke halaman lainnya. Navigasi ini memungkinkan pengguna untuk membuka halaman berbeda seperti halaman utama, halaman form tambah data, maupun halaman edit data. Perpindahan antar halaman dilakukan menggunakan Navigator dan MaterialPageRoute yang merupakan bagian dari sistem navigasi di Flutter.
 
-1. Navigasi dari CoverPage ke HomePage
+### 1. Navigasi dari CoverPage ke HomePage
 
    Navigator.push() digunakan untuk berpindah dari halaman pembuka (CoverPage) ke halaman utama (HomePage) saat tombol “Lihat Menu” ditekan.
 
    <img width="434" height="143" alt="image" src="https://github.com/user-attachments/assets/181bfeaf-b927-4c2d-9063-960f15622004" />
 
-2. Navigasi dari HomePage ke FormPage (Tambah Data)
+### 2. Navigasi dari HomePage ke FormPage (Tambah Data)
 
    Navigator.push() digunakan untuk membuka halaman FormPage ketika tombol tambah (+) ditekan, sehingga pengguna dapat mengisi data minuman baru.
 
    <img width="585" height="111" alt="image" src="https://github.com/user-attachments/assets/6099ba88-159f-4ceb-8682-c981aa843db1" />
 
-3. Navigasi untuk Edit Data
+### 3. Navigasi untuk Edit Data
 
    Navigator.push() juga digunakan untuk membuka FormPage dalam mode edit dengan membawa data minuman yang dipilih agar bisa diperbarui.
 
@@ -253,7 +253,7 @@ Aplikasi Selalu Teh menggunakan sistem navigasi untuk berpindah dari satu halama
 
 # ᰔ SUPABASE 
 
-- Tampilan database
+### - Tampilan database
 
   Pada gambar pertama ditampilkan tampilan database pada Supabase yang berisi data menu minuman yang digunakan pada aplikasi Selalu Teh. Di dalam tabel tersebut terdapat beberapa data menu seperti Red Velvet, Lemon Green Tea, Teh Susu, dan Strawberry Cheese Cake. Setiap data menu memiliki beberapa informasi pendukung seperti id, name, price, sugar_level, image_url, serta created_at yang digunakan untuk menyimpan detail dari masing-masing menu.
 
@@ -261,7 +261,7 @@ Aplikasi Selalu Teh menggunakan sistem navigasi untuk berpindah dari satu halama
 
   <img alt="image" src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/372af771fb765658f718aa7d9932d06b93d6d25d/SS%20Readme/Database.png" />
 
-- Tampilan table editor
+### - Tampilan table editor
 
    Pada gambar kedua ditampilkan struktur tabel menus melalui fitur Table Editor pada Supabase. Tabel ini digunakan sebagai tempat penyimpanan data menu yang akan digunakan oleh aplikasi Selalu Teh. Di dalam tabel tersebut terdapat beberapa kolom yang berfungsi untuk menyimpan informasi terkait menu minuman. Kolom id dengan tipe data int8 digunakan sebagai identitas unik untuk setiap menu. Kolom name bertipe text digunakan untuk menyimpan nama minuman. Kolom price dengan tipe data int4 digunakan untuk menyimpan harga dari menu tersebut. Selanjutnya terdapat kolom sugar_level bertipe text yang digunakan untuk menyimpan informasi tingkat gula pada minuman.
 
