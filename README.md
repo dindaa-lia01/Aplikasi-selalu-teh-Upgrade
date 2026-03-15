@@ -23,11 +23,8 @@ Tampilan menu disajikan dalam bentuk grid agar terlihat seperti katalog produk, 
 # ᰔ Tampilan UI
 
 <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/f70ccb24134974da320d9c0ffebbfb4f21c07ffe/SS%20Readme/cover.png" width="400" height="700">
-
 <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/b7aeb5c87293f776392ebcf1cace5e5284cb7c5d/Screenshot%202026-03-15%20142453.png" width="400" height="700">
-
 <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/45de71121b8044013f5d59f211e314ccd4914b35/SS%20Readme/dark_mode.png" width="400" height="700">
-
 <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/c48cac87217b83bf33343113b616a6abd03b311f/SS%20Readme/formpage.png" width="400" height="700">
 
 # ᰔ Fitur Utama
@@ -42,7 +39,20 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
 
   Melakukan create pada form yang tersedia
 
-  <img width="300" height="400" alt="Screenshot 2026-02-25 120705" src="https://github.com/user-attachments/assets/d62dcdda-fb76-4e56-93f0-5486e9e8c1ad" />
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/e85de5bbf59f8a253acf1f148e5322022b6527c0/SS%20Readme/create.png" width="400" height="600">
+
+  Gambar pertama dan kedua menampilkan halaman Tambah Menu dengan contoh proses validasi pada form input. Aplikasi akan menampilkan pesan kesalahan apabila data yang dimasukkan tidak sesuai atau masih kosong, seperti nama harus berupa huruf, harga harus berupa angka, serta setiap kolom wajib diisi. Hal ini bertujuan untuk memastikan data yang dimasukkan pengguna sudah benar sebelum disimpan.
+
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/e85de5bbf59f8a253acf1f148e5322022b6527c0/SS%20Readme/error%20handling%20formpage.png" width="300" height="400">
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/e85de5bbf59f8a253acf1f148e5322022b6527c0/SS%20Readme/error%20handling%20(2).png" width="300" height="400">
+
+ Jika Create berhasil, maka akan muncul pop up untuk memberi feedback ke pengguna setelah melakukan aksi.
+ 
+ <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/e85de5bbf59f8a253acf1f148e5322022b6527c0/SS%20Readme/create%20berhasil.png" width="400" height="600">
+
+ Dapat dilihat pada dokumentasi dibawah ini, bahwa data minuman dengan nama Creamy Berry berhasil ditambahkan ke database
+
+ <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/e85de5bbf59f8a253acf1f148e5322022b6527c0/SS%20Readme/output%20create.png" width="400" height="600">
   
 - Menampilkan data minuman (Read)
 
