@@ -64,13 +64,9 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
 
   Pengguna dapat mengubah data minuman yang sudah ada melalui button _edit_. Data lama akan ditampilkan kembali di form, lalu dapat diperbarui sesuai kebutuhan.
 
-  Sebelum data harga di update:
+  Sebelum data diupdate, harga awal adalah Rp12.000, namun kita akan melakukan update harga menjadi Rp18.000
 
-  <img width="400" height="700" alt="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/b0fbb31b1ca826f009fed27067d4e3876100f60f/SS%20Readme/edit%20red%20velvet.png">
-
-  Mengupdate data harga dari Rp12.000 menjadi Rp18.000 pada form yang tersedia:
-  
-  <img width="400" height="700" alt="Screenshot_1772022711" src="https://github.com/user-attachments/assets/bb5457d3-38a7-454b-8d54-32bb15347125" />
+  <img width="400" height="700" src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/b0fbb31b1ca826f009fed27067d4e3876100f60f/SS%20Readme/edit%20red%20velvet.png">
 
   Setelah data harga di update:
   
@@ -78,7 +74,9 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
 
 - Menghapus data minuman (Delete)
 
-  Pengguna dapat menghapus menu minuman dari daftar dengan menekan button _delete_, lalu mengkonfirmasi jika ingin benar-benar menghapus sehingga data tersebut tidak lagi ditampilkan. 
+  Pengguna dapat menghapus menu minuman dari daftar dengan menekan button _delete_, lalu mengkonfirmasi jika ingin benar-benar menghapus sehingga data tersebut tidak lagi ditampilkan.
+
+   <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/50743f5ca1d1d68505895934e53a192870d3b492/SS%20Readme/konfirmasi%20delete.png" width="300" height="400">
   
 
 # 📁 Struktur Folder Project
