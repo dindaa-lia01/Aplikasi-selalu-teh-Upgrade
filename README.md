@@ -66,9 +66,9 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
 
   Sebelum data harga di update:
 
-  <img width="200" height="300" alt="Screenshot_1771992992" src="https://github.com/user-attachments/assets/6c37af56-3a96-4736-964b-46a6f61405a1" />
+  <img width="400" height="700" alt="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/b0fbb31b1ca826f009fed27067d4e3876100f60f/SS%20Readme/edit%20red%20velvet.png">
 
-  Mengupdate data harga dari Rp12.000 menjadi Rp16.000 pada form yang tersedia:
+  Mengupdate data harga dari Rp12.000 menjadi Rp18.000 pada form yang tersedia:
   
   <img width="400" height="700" alt="Screenshot_1772022711" src="https://github.com/user-attachments/assets/bb5457d3-38a7-454b-8d54-32bb15347125" />
 
@@ -78,9 +78,8 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
 
 - Menghapus data minuman (Delete)
 
-  Pengguna dapat menghapus menu minuman dari daftar dengan menekan button _delete_, sehingga data tersebut tidak lagi ditampilkan.
+  Pengguna dapat menghapus menu minuman dari daftar dengan menekan button _delete_, lalu mengkonfirmasi jika ingin benar-benar menghapus sehingga data tersebut tidak lagi ditampilkan. 
   
-  <img width="200" height="300" alt="Screenshot_1772022880" src="https://github.com/user-attachments/assets/e57971af-0aa9-4172-af61-d606e29dc381" />
 
 # 📁 Struktur Folder Project
 ```bash
