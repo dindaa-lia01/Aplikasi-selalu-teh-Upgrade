@@ -17,12 +17,19 @@ class CoverPage extends StatelessWidget {
               children: [
                 // Logo / Icon
                 Container(
-                  padding: const EdgeInsets.all(24),
+                  padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.15),
                     shape: BoxShape.circle,
                   ),
-                  child: const Text("🧋", style: TextStyle(fontSize: 80)),
+                  child: ClipOval(
+                    child: Image.asset(
+                      "assets/images/OIP.webp",
+                      width: 90,
+                      height: 90,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
                 const SizedBox(height: 32),
 

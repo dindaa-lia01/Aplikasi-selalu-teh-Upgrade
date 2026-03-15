@@ -1,8 +1,9 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import '../models/drinks.dart';
-import '../pages/form_page.dart';
+import '../services/drink_service.dart';
+import 'package:intl/intl.dart';
+import '../main.dart';
+import 'form_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,155 +13,196 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<Drink> drinkList = [
-    Drink(name: "Teh Manis", price: 10000, sugarLevel: "Normal", emoji: "🍵"),
-    Drink(name: "Creamy Berry", price: 12000, sugarLevel: "Extra", emoji: "🍓"),
-    Drink(name: "Kopi Avocado", price: 16000, sugarLevel: "Less", emoji: "🥑"),
-    Drink(
-      name: "Lemon Green Tea",
-      price: 12000,
-      sugarLevel: "Normal",
-      emoji: "🍋",
-    ),
-  ];
-
-  void addDrink(Drink drink) {
-    setState(() {
-      drinkList.add(drink);
-    });
-  }
-
-  void updateDrink(int index, Drink drink) {
-    setState(() {
-      drinkList[index] = drink;
-    });
-  }
-
-  void deleteDrink(int index) {
-    setState(() {
-      drinkList.removeAt(index);
-    });
-  }
+  final DrinkService service = DrinkService();
+  final formatRupiah = NumberFormat("#,###", "id_ID");
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 230, 244, 241),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 15, 118, 110),
-        centerTitle: true,
         title: const Text(
           "Selalu Teh",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
+        centerTitle: true,
+
+        actions: [
+          IconButton(
+            icon: Icon(
+              Theme.of(context).brightness == Brightness.dark
+                  ? Icons.light_mode
+                  : Icons.dark_mode,
+            ),
+            onPressed: () {
+              MyApp.of(context).toggleTheme();
+            },
+          ),
+        ],
       ),
 
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         child: const Icon(Icons.add),
         onPressed: () async {
-          final newDrink = await Navigator.push(
+          await Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const FormPage()),
           );
-
-          if (newDrink != null) {
-            addDrink(newDrink);
-          }
+          setState(() {});
         },
       ),
 
-      body: drinkList.isEmpty
-          ? const Center(child: Text("Belum ada menu minuman"))
-          : GridView.builder(
-              padding: const EdgeInsets.all(12),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
-                childAspectRatio: 0.65,
-              ),
+      body: FutureBuilder<List<Drink>>(
+        future: service.getDrinks(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          }
 
-              itemCount: drinkList.length,
-              itemBuilder: (context, index) {
-                final drink = drinkList[index];
-                return Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(16),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 5,
-                        offset: Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  padding: const EdgeInsets.all(10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      const SizedBox(height: 10),
+          if (snapshot.hasError) {
+            return Center(child: Text("Error: ${snapshot.error}"));
+          }
 
-                      Text(drink.emoji, style: const TextStyle(fontSize: 60)),
+          final drinks = snapshot.data ?? [];
 
-                      const SizedBox(height: 12),
+          if (drinks.isEmpty) {
+            return const Center(child: Text("Belum ada menu minuman"));
+          }
 
-                      Text(
-                        drink.name,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
-                      ),
+          return GridView.builder(
+            padding: const EdgeInsets.all(12),
 
-                      const SizedBox(height: 6),
-
-                      Text(
-                        "Rp${drink.price}",
-                        style: const TextStyle(fontSize: 14),
-                      ),
-
-                      const SizedBox(height: 4),
-
-                      Text(
-                        "Manis: ${drink.sugarLevel}",
-                        style: const TextStyle(fontSize: 13),
-                      ),
-
-                      const Spacer(),
-
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          IconButton(
-                            icon: const Icon(Icons.edit, color: Colors.blue),
-                            onPressed: () async {
-                              final updatedDrink = await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => FormPage(drink: drink),
-                                ),
-                              );
-
-                              if (updatedDrink != null) {
-                                updateDrink(index, updatedDrink);
-                              }
-                            },
-                          ),
-                          IconButton(
-                            icon: const Icon(Icons.delete, color: Colors.red),
-                            onPressed: () {
-                              deleteDrink(index);
-                            },
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                );
-              },
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              childAspectRatio: 0.70,
             ),
+
+            itemCount: drinks.length,
+
+            itemBuilder: (context, index) {
+              final drink = drinks[index];
+
+              return Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).cardColor,
+                  borderRadius: BorderRadius.circular(16),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 5,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+
+                padding: const EdgeInsets.all(10),
+
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Image.network(
+                        drink.imageUrl,
+                        height: 210,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+
+                    const SizedBox(height: 10),
+
+                    Center(
+                      child: Text(
+                        drink.name,
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                    ),
+
+                    const SizedBox(height: 6),
+
+                    Text(
+                      "Rp ${formatRupiah.format(drink.price)}",
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.teal,
+                        fontSize: 14,
+                      ),
+                    ),
+
+                    Text(
+                      "Level Manis: ${drink.sugarLevel}",
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+
+                    const Spacer(),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        IconButton(
+                          icon: const Icon(Icons.edit, color: Colors.blue),
+                          onPressed: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => FormPage(drink: drink),
+                              ),
+                            );
+                            setState(() {});
+                          },
+                        ),
+
+                        IconButton(
+                          icon: const Icon(Icons.delete, color: Colors.red),
+                          onPressed: () async {
+                            bool? confirm = await showDialog(
+                              context: context,
+                              builder: (context) {
+                                return AlertDialog(
+                                  title: const Text("Konfirmasi Hapus"),
+                                  content: const Text(
+                                    "Apakah kamu yakin ingin menghapus menu ini?",
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(context, false);
+                                      },
+                                      child: const Text("Batal"),
+                                    ),
+
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(context, true);
+                                      },
+                                      child: const Text("Hapus"),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+
+                            if (confirm == true) {
+                              await service.deleteDrink(drink.id!);
+                              setState(() {});
+                            }
+                          },
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              );
+            },
+          );
+        },
+      ),
     );
   }
 }
