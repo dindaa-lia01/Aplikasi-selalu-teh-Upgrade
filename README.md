@@ -253,7 +253,21 @@ Aplikasi Selalu Teh menggunakan sistem navigasi untuk berpindah dari satu halama
 
 # ᰔ SUPABASE 
 
+- Tampilan database
 
+  Pada gambar pertama ditampilkan tampilan database pada Supabase yang berisi data menu minuman yang digunakan pada aplikasi Selalu Teh. Di dalam tabel tersebut terdapat beberapa data menu seperti Red Velvet, Lemon Green Tea, Teh Susu, dan Strawberry Cheese Cake. Setiap data menu memiliki beberapa informasi pendukung seperti id, name, price, sugar_level, image_url, serta created_at yang digunakan untuk menyimpan detail dari masing-masing menu.
+
+  Pada tahap awal pengembangan aplikasi, data menu yang ditampilkan pada aplikasi masih menggunakan list lokal yang dituliskan langsung di dalam kode program. Cara ini membuat data bersifat statis sehingga setiap perubahan data harus dilakukan dengan mengubah kode aplikasi terlebih dahulu. Setelah dilakukan integrasi dengan Supabase, data menu kini disimpan di dalam database online, sehingga aplikasi dapat mengambil data secara langsung dari database. Dengan demikian, proses pengelolaan data menjadi lebih fleksibel karena data dapat ditambahkan, diperbarui, maupun dihapus melalui database tanpa perlu melakukan perubahan pada kode program aplikasi.
+
+  <img width="490" height="149" alt="image" src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/372af771fb765658f718aa7d9932d06b93d6d25d/SS%20Readme/Database.png" />
+
+- Tampilan table editor
+
+   Pada gambar kedua ditampilkan struktur tabel menus melalui fitur Table Editor pada Supabase. Tabel ini digunakan sebagai tempat penyimpanan data menu yang akan digunakan oleh aplikasi Selalu Teh. Di dalam tabel tersebut terdapat beberapa kolom yang berfungsi untuk menyimpan informasi terkait menu minuman. Kolom id dengan tipe data int8 digunakan sebagai identitas unik untuk setiap menu. Kolom name bertipe text digunakan untuk menyimpan nama minuman. Kolom price dengan tipe data int4 digunakan untuk menyimpan harga dari menu tersebut. Selanjutnya terdapat kolom sugar_level bertipe text yang digunakan untuk menyimpan informasi tingkat gula pada minuman.
+
+  Selain itu, terdapat kolom image_url bertipe text yang digunakan untuk menyimpan alamat atau tautan gambar menu sehingga gambar dapat ditampilkan pada aplikasi. Kolom terakhir yaitu created_at dengan tipe data timestamp yang berfungsi untuk mencatat waktu ketika data tersebut dibuat atau ditambahkan ke dalam database. Dengan adanya struktur tabel ini, data yang disimpan menjadi lebih terorganisir dan mudah untuk diakses oleh aplikasi melalui integrasi Supabase. Hal ini membuat aplikasi Selalu Teh dapat menampilkan data menu secara dinamis karena data diambil langsung dari database yang telah dibuat.
+
+  <img width="490" height="149" alt="image" src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/372af771fb765658f718aa7d9932d06b93d6d25d/SS%20Readme/table%20editor.png" />
 
 
 
