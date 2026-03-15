@@ -24,7 +24,7 @@ Tampilan menu disajikan dalam bentuk grid agar terlihat seperti katalog produk, 
 
 <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/f70ccb24134974da320d9c0ffebbfb4f21c07ffe/SS%20Readme/cover.png" width="400" height="700">
 <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/571b69759b2224069da0f0a41883b7b2933a58eb/SS%20Readme/homepage2.png" width="400" height="700">
-<img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/45de71121b8044013f5d59f211e314ccd4914b35/SS%20Readme/dark_mode.png" width="400" height="700">
+<img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/a15b0ff50669f62b96f88eb867e4fb80546376c5/SS%20Readme/dark.png" width="400" height="700">
 <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/c48cac87217b83bf33343113b616a6abd03b311f/SS%20Readme/formpage.png" width="400" height="700">
 
 # ᰔ Fitur Utama
@@ -85,6 +85,7 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
   icon saat ingin berpindah ke dark mode
 
   <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/e85de5bbf59f8a253acf1f148e5322022b6527c0/SS%20Readme/ke%20dark%20mode.png" width="300" height="700">
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/a15b0ff50669f62b96f88eb867e4fb80546376c5/SS%20Readme/dark.png" width="400" height="700">
 
   Icon saat ingin berpindah ke light mode
 
@@ -93,43 +94,52 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
   
 
 # 📁 Struktur Folder Project
-```bash
 lib/
+├── config/
+│   └── supabase_config.dart   # Konfigurasi Supabase
 ├── models/
-│   └── drinks.dart        # Model data Drink
+│   └── drinks.dart            # Model data minuman
 ├── pages/
-│   ├── cover_page.dart    # Halaman cover / splash
-│   ├── form_page.dart     # Halaman form input/edit
-│   └── home_page.dart     # Halaman utama
-└── main.dart              # Entry point aplikasi
-```
+│   ├── cover_page.dart        # Halaman cover / splash
+│   ├── form_page.dart         # Halaman form tambah/edit menu
+│   └── home_page.dart         # Halaman utama aplikasi
+├── services/
+│   └── drink_service.dart     # Service untuk operasi data minuman
+└── main.dart                  # Entry point aplikasi
 
-Project dibagi menjadi dua package utama:
-1. Models
+Project dibagi menjadi 4 package utama:
+1. config
 
-   Berisi file _drink.dart_ yang digunakan untuk membuat model data minuman. Fungsinya: Menyimpan data minuman dalam bentuk object, digunakan untuk menampung data pada List di HomePage.
+   Folder ini berisi file konfigurasi yang bernama supabase_config.dart yang digunakan untuk menghubungkan aplikasi Flutter dengan database Supabase. Di dalamnya terdapat pengaturan seperti URL Supabase dan API Key yang diambil dari file .env, lalu digunakan untuk menginisialisasi koneksi database agar aplikasi bisa mengakses data.
 
-2. Pages
-   - CoverPage
+3. models
 
-     CoverPage adalah halaman pembuka aplikasi. Di halaman ini ditampilkan logo, nama toko, dan tombol untuk masuk ke aplikasi. Ketika tombol ditekan, pengguna akan berpindah ke HomePage menggunakan Navigator.push. Halaman ini menggunakan konsep StatelessWidget karena tampilannya tidak berubah-ubah, serta menerapkan navigasi antar halaman (Multi Page Navigation).
-
-   - HomePage
+    Folder ini berisi model data yang digunakan dalam aplikasi. File drinks.dart mendefinisikan struktur data untuk menu minuman. Model ini berisi atribut seperti id, name, price, sugarLevel, dan imageUrl. Model ini juga memiliki fungsi untuk mengubah data dari format JSON ke objek Dart dan sebaliknya agar mudah digunakan dalam aplikasi.
     
-     HomePage merupakan halaman utama yang menampilkan daftar minuman. Di halaman ini, data disimpan dalam bentuk List dan dikelola secara langsung. Jika ada perubahan data, tampilan akan diperbarui menggunakan setState.
+4. pages
+    
+   Folder ini berisi halaman tampilan (UI) yang dilihat dan digunakan oleh pengguna. terdapat beberapa file sebagai berikut:
+    
+   - cover_page.dart
+   
+     Halaman awal aplikasi yang menampilkan cover atau tampilan pembuka aplikasi “Selalu Teh”. Halaman ini berisi logo, nama aplikasi, dan tombol untuk masuk ke halaman utama.
+    
+    - form_page.dart
+    
+      Halaman yang digunakan untuk menambah atau mengedit data menu minuman. Di halaman ini terdapat form input seperti nama minuman, harga, level manis, dan link gambar.
+    
+   - home_page.dart
 
-     HomePage memiliki fitur lengkap seperti Create (menambah data melalui FloatingActionButton), Read (menampilkan data menggunakan GridView.builder), Update (mengedit data melalui tombol edit), dan Delete (menghapus data melalui tombol delete). Halaman ini menggunakan StatefulWidget karena datanya bisa berubah-ubah, serta menggunakan Navigator.push dan Navigator.pop untuk berpindah halaman.
+     Halaman utama aplikasi yang menampilkan daftar menu minuman yang diambil dari database Supabase. Pada halaman ini pengguna dapat melihat menu, mengedit data, menghapus data, dan menambah menu baru.
 
-   - FormPage
+5. services
 
-     FormPage adalah halaman yang digunakan untuk menambah atau mengedit data minuman. Halaman ini menggunakan Form dan TextFormField untuk menerima input dari pengguna. Setiap input akan divalidasi agar tidak boleh kosong. Jika halaman dibuka dalam mode edit, maka field akan otomatis terisi dengan data sebelumnya.
+   Folder ini berisi logika pengolahan data atau komunikasi dengan database. File drink_service.dart berfungsi untuk menangani operasi CRUD (Create, Read, Update, Delete) terhadap data minuman di database Supabase. Dengan adanya service ini, pengambilan dan pengolahan data menjadi lebih terstruktur dan tidak langsung ditulis di halaman UI.
 
-     FormPage menggunakan GlobalKey untuk mengontrol form, TextEditingController untuk mengatur isi input, serta Navigator.pop(context, drink) untuk mengirim kembali data yang sudah diisi ke halaman sebelumnya.
+6. main.dart
 
-- main.dart
-
-  File main.dart merupakan titik awal dari aplikasi. File ini bertugas menjalankan aplikasi menggunakan runApp(), mengatur tema (theme) aplikasi, serta menentukan halaman pertama yang akan ditampilkan, yaitu CoverPage. Jadi, bisa dibilang main.dart adalah pusat awal saat aplikasi mulai dijalankan.
-
+   File ini merupakan entry point atau titik awal saat aplikasi Flutter dijalankan. Di file ini dilakukan inisialisasi Supabase, pengaturan tema aplikasi (light mode dan dark mode), serta menjalankan aplikasi dengan memanggil halaman awal yaitu CoverPage.
+   
 # 📌 Widget yang Digunakan
 
 Widget adalah komponen dasar dalam Flutter yang digunakan untuk membangun tampilan dan struktur aplikasi.
