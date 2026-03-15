@@ -148,10 +148,10 @@ Widget adalah komponen dasar dalam Flutter yang digunakan untuk membangun tampil
 
 | Widget | Kegunaan |
 |--------|----------|
-| `MaterialApp` | Widget utama untuk menjalankan aplikasi dan mengatur tema serta halaman awal. |
-| `Scaffold` | Kerangka dasar halaman yang menyediakan AppBar, body, dan FloatingActionButton. |
-| `AppBar` | Menampilkan judul dan navigasi di bagian atas halaman. |
-| `SafeArea` | Mengatur agar konten tidak tertutup oleh notch atau sistem UI perangkat. |
+| `MaterialApp` | Widget utama yang menjalankan aplikasi Flutter serta mengatur tema. |
+| `Scaffold` | Kerangka dasar halaman seperti AppBar, body, dan FloatingActionButton. |
+| `AppBar` | Menampilkan judul aplikasi dan tombol aksi. |
+| `SafeArea` | Mengatur agar konten tidak tertutup sistem UI perangkat. |
 
 ---
 
@@ -159,14 +159,15 @@ Widget adalah komponen dasar dalam Flutter yang digunakan untuk membangun tampil
 
 | Widget | Kegunaan |
 |--------|----------|
-| `Column` | Menyusun widget secara vertikal (atas ke bawah). |
-| `Row` | Menyusun widget secara horizontal (kiri ke kanan). |
-| `Center` | Memposisikan widget agar berada di tengah. |
+| `Column` | Menyusun widget secara vertikal dari atas ke bawah. |
+| `Row` | Menyusun widget secara horizontal dari kiri ke kanan. |
+| `Center` | Memposisikan widget agar berada di tengah layar. |
 | `Padding` | Memberikan jarak di sekitar widget. |
-| `SizedBox` | Memberikan jarak atau ukuran tetap pada widget. |
-| `Container` | Widget serbaguna untuk mengatur ukuran, warna, dan dekorasi. |
-| `GridView.builder` | Menampilkan data dalam bentuk grid/katalog secara dinamis. |
-| `Spacer` | Memberikan ruang kosong fleksibel di dalam Column atau Row. |
+| `SizedBox` | Memberikan jarak atau ukuran tetap antar widget. |
+| `Container` | Widget serbaguna untuk mengatur ukuran, warna, padding, dan dekorasi. |
+| `GridView.builder` | Menampilkan data menu minuman dalam bentuk grid secara dinamis dari database. |
+| `Spacer` | Memberikan ruang kosong fleksibel di dalam Row atau Column. |
+| `ListView` | Menampilkan daftar widget secara vertikal yang bisa di-scroll (digunakan pada halaman form). |
 
 ---
 
@@ -174,11 +175,12 @@ Widget adalah komponen dasar dalam Flutter yang digunakan untuk membangun tampil
 
 | Widget | Kegunaan |
 |--------|----------|
-| `Form` | Mengelompokkan beberapa field input menjadi satu kesatuan form. |
-| `GlobalKey<FormState>` | Digunakan untuk mengontrol dan memvalidasi form. |
-| `TextFormField` | Input teks dengan fitur validasi. |
+| `Form` | Mengelompokkan beberapa input menjadi satu kesatuan form. |
+| `GlobalKey<FormState>` | Digunakan untuk mengontrol dan melakukan validasi pada form. |
+| `TextFormField` | Input teks dengan fitur validasi untuk nama, harga, dan link gambar. |
+| `DropdownButtonFormField` | Input pilihan dropdown untuk memilih level manis minuman. |
 | `TextEditingController` | Mengontrol dan mengambil nilai dari input field. |
-| `ElevatedButton` | Tombol utama untuk menyimpan atau memperbarui data. |
+| `ElevatedButton` | Tombol utama untuk menyimpan atau memperbarui data menu. |
 
 ---
 
@@ -186,8 +188,8 @@ Widget adalah komponen dasar dalam Flutter yang digunakan untuk membangun tampil
 
 | Widget / Method | Kegunaan |
 |-----------------|----------|
-| `Navigator.push` | Berpindah ke halaman baru. |
-| `Navigator.pop` | Kembali ke halaman sebelumnya atau mengirim data kembali. |
+| `Navigator.push` | Berpindah dari satu halaman ke halaman lain (misalnya dari Home ke FormPage). |
+| `Navigator.pop` | Kembali ke halaman sebelumnya setelah data berhasil disimpan atau dibatalkan. |
 | `MaterialPageRoute` | Mengatur transisi halaman dengan gaya Material Design. |
 
 ---
@@ -196,9 +198,11 @@ Widget adalah komponen dasar dalam Flutter yang digunakan untuk membangun tampil
 
 | Widget | Kegunaan |
 |--------|----------|
-| `FloatingActionButton` | Tombol utama untuk menambahkan data (Create). |
-| `IconButton` | Tombol berbentuk ikon untuk edit dan delete. |
-| `Icon` | Menampilkan ikon visual pada tombol atau tampilan. |
+| `FloatingActionButton` | Tombol utama untuk menambahkan menu minuman baru. |
+| `IconButton` | Tombol berbentuk ikon yang digunakan untuk edit dan delete data. |
+| `Icon` | Menampilkan ikon visual seperti tambah, edit, delete, atau lokasi. |
+| `ElevatedButton` | Tombol untuk menjalankan aksi seperti masuk ke halaman menu atau menyimpan data. |
+| `TextButton` | Tombol sederhana yang digunakan pada dialog konfirmasi hapus. |
 
 ---
 
@@ -206,11 +210,26 @@ Widget adalah komponen dasar dalam Flutter yang digunakan untuk membangun tampil
 
 | Widget / Class | Kegunaan |
 |----------------|----------|
-| `BoxDecoration` | Mengatur dekorasi seperti warna dan bayangan pada Container. |
+| `BoxDecoration` | Mengatur dekorasi pada Container seperti warna dan bayangan. |
 | `BorderRadius` | Membuat sudut widget menjadi melengkung. |
-| `BoxShadow` | Memberikan efek bayangan pada widget. |
-| `TextStyle` | Mengatur gaya teks seperti ukuran dan ketebalan. |
-| `ThemeData` | Mengatur tema keseluruhan aplikasi seperti warna utama. |
+| `BoxShadow` | Memberikan efek bayangan pada card menu minuman. |
+| `TextStyle` | Mengatur gaya teks seperti ukuran, warna, dan ketebalan. |
+| `ThemeData` | Mengatur tema keseluruhan aplikasi seperti warna utama dan mode terang/gelap. |
+| `ClipRRect` | Memotong gambar agar memiliki sudut melengkung. |
+| `ClipOval` | Memotong gambar menjadi bentuk lingkaran (digunakan pada logo cover). |
+
+---
+
+## 🔹 Widget Tambahan (Digunakan di Project)
+
+| Widget | Kegunaan |
+|--------|----------|
+| `FutureBuilder` | Menampilkan data dari Supabase secara asynchronous. |
+| `CircularProgressIndicator` | Menampilkan loading saat data sedang diambil dari database. |
+| `AlertDialog` | Menampilkan dialog konfirmasi saat pengguna ingin menghapus menu. |
+| `SnackBar` | Menampilkan notifikasi setelah data berhasil ditambah, diubah, atau terjadi error. |
+| `Image.network` | Menampilkan gambar menu minuman dari URL. |
+| `Image.asset` | Menampilkan gambar logo dari folder assets. |
 
 ---
 
