@@ -23,7 +23,7 @@ Tampilan menu disajikan dalam bentuk grid agar terlihat seperti katalog produk, 
 # ᰔ Tampilan UI
 
 <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/f70ccb24134974da320d9c0ffebbfb4f21c07ffe/SS%20Readme/cover.png" width="400" height="700">
-<img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/b7aeb5c87293f776392ebcf1cace5e5284cb7c5d/Screenshot%202026-03-15%20142453.png" width="400" height="700">
+<img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/571b69759b2224069da0f0a41883b7b2933a58eb/SS%20Readme/homepage2.png" width="400" height="700">
 <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/45de71121b8044013f5d59f211e314ccd4914b35/SS%20Readme/dark_mode.png" width="400" height="700">
 <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/c48cac87217b83bf33343113b616a6abd03b311f/SS%20Readme/formpage.png" width="400" height="700">
 
@@ -35,7 +35,7 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
 
   Pengguna dapat menambahkan menu minuman baru dengan mengisi form yang tersedia, seperti nama minuman, harga, level manis, dan ikon. Data yang diinput akan langsung tampil pada halaman utama dengan meng-klik button _(+)_ di sudut kanan bawah.
 
-  <img width="300" height="400" alt="Screenshot 2026-02-25 120853" src="https://github.com/user-attachments/assets/6e313026-0981-4d58-8de6-039cd36bd0c9" />
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/571b69759b2224069da0f0a41883b7b2933a58eb/SS%20Readme/button%20create.png" width="300" height="400">
 
   Melakukan create pada form yang tersedia
 
@@ -58,7 +58,7 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
 
   Aplikasi menampilkan seluruh daftar menu minuman dalam bentuk grid/katalog pada halaman utama lengkap dengan informasi detailnya.
 
-  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/b7aeb5c87293f776392ebcf1cace5e5284cb7c5d/Screenshot%202026-03-15%20142453.png" width="400" height="700">
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/571b69759b2224069da0f0a41883b7b2933a58eb/SS%20Readme/homepage2.png" width="300" height="400">
 
 - Mengedit data minuman yang sudah ada (Update)
 
@@ -66,7 +66,7 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
 
   Sebelum data harga di update:
 
-   <img width="200" height="300" alt="Screenshot_1771992992" src="https://github.com/user-attachments/assets/6c37af56-3a96-4736-964b-46a6f61405a1" />
+  <img width="200" height="300" alt="Screenshot_1771992992" src="https://github.com/user-attachments/assets/6c37af56-3a96-4736-964b-46a6f61405a1" />
 
   Mengupdate data harga dari Rp12.000 menjadi Rp16.000 pada form yang tersedia:
   
@@ -74,7 +74,7 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
 
   Setelah data harga di update:
   
-  <img width="200" height="300" alt="setelah update" src="https://github.com/user-attachments/assets/c051691b-7856-45b1-8c23-c0e17002af9c" />
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/571b69759b2224069da0f0a41883b7b2933a58eb/SS%20Readme/update%20berhasil.png" width="300" height="400">
 
 - Menghapus data minuman (Delete)
 
