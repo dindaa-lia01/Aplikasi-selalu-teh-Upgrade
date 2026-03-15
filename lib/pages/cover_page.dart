@@ -15,7 +15,7 @@ class CoverPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Logo / Icon
+                
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
@@ -33,7 +33,7 @@ class CoverPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 32),
 
-                // Nama Toko
+                
                 const Text(
                   "Selalu Teh",
                   style: TextStyle(
@@ -45,7 +45,7 @@ class CoverPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
 
-                // Tagline
+                
                 Text(
                   "Teh Terenak No.2 di Indonesia",
                   textAlign: TextAlign.center,
@@ -57,7 +57,7 @@ class CoverPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
 
-                // Lokasi
+                
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -79,7 +79,7 @@ class CoverPage extends StatelessWidget {
 
                 const SizedBox(height: 60),
 
-                // Tombol Masuk
+                
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
@@ -112,7 +112,7 @@ class CoverPage extends StatelessWidget {
 
                 const SizedBox(height: 16),
 
-                // Teks kecil bawah
+                
                 Text(
                   "© Selalu Teh",
                   style: TextStyle(fontSize: 12, color: Colors.teal.shade200),
