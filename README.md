@@ -21,9 +21,12 @@ Aplikasi ini dirancang sebagai sistem manajemen menu yang memungkinkan pengguna 
 Tampilan menu disajikan dalam bentuk grid agar terlihat seperti katalog produk, sehingga lebih menarik dan mudah dibaca. Aplikasi ini juga menerapkan konsep Object-Oriented Programming (OOP) dengan menggunakan model data serta pengelolaan state menggunakan StatefulWidget.
 
 # ᰔ Tampilan UI
-<img width="400" height="700" alt="Screenshot_1772022897" src="https://github.com/user-attachments/assets/c9f26153-2f0a-402c-bbc2-3b8ae51acd3b" />
 
-![image alt] (https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/b7aeb5c87293f776392ebcf1cace5e5284cb7c5d/Screenshot%202026-03-15%20142453.png)
+![image alt](https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/f70ccb24134974da320d9c0ffebbfb4f21c07ffe/SS%20Readme/cover.png)
+
+![image alt](https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/b7aeb5c87293f776392ebcf1cace5e5284cb7c5d/Screenshot%202026-03-15%20142453.png)
+
+
 
 # ᰔ Fitur Utama
 
