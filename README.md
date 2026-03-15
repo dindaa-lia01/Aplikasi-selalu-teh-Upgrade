@@ -66,7 +66,7 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
 
   Sebelum data diupdate, harga awal adalah Rp12.000, namun kita akan melakukan update harga menjadi Rp18.000
 
-  <img width="400" height="700" src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/b0fbb31b1ca826f009fed27067d4e3876100f60f/SS%20Readme/edit%20red%20velvet.png">
+  <img width="400" height="300" src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/b0fbb31b1ca826f009fed27067d4e3876100f60f/SS%20Readme/edit%20red%20velvet.png">
 
   Setelah data harga di update:
   
@@ -77,6 +77,19 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
   Pengguna dapat menghapus menu minuman dari daftar dengan menekan button _delete_, lalu mengkonfirmasi jika ingin benar-benar menghapus sehingga data tersebut tidak lagi ditampilkan.
 
    <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/50743f5ca1d1d68505895934e53a192870d3b492/SS%20Readme/konfirmasi%20delete.png" width="300" height="400">
+
+- Fitur Dark Mode dan Light Mode
+
+  Pada aplikasi ini terdapat fitur untuk mengubah tampilan tema menjadi light mode atau dark mode. Pengguna dapat mengganti tema dengan menekan ikon yang berada di sudut kanan atas pada halaman aplikasi. Ketika ikon tersebut ditekan, tampilan aplikasi akan berubah dari mode terang (light) menjadi mode gelap (dark), atau sebaliknya. Fitur ini memudahkan pengguna menyesuaikan tampilan aplikasi sesuai dengan kenyamanan saat digunakan.
+
+  icon saat ingin berpindah ke dark mode
+
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/e85de5bbf59f8a253acf1f148e5322022b6527c0/SS%20Readme/ke%20dark%20mode.png" width="300" height="700">
+
+  Icon saat ingin berpindah ke light mode
+
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/e85de5bbf59f8a253acf1f148e5322022b6527c0/SS%20Readme/ke%20light%20mode.png" width="300" height="700">
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/571b69759b2224069da0f0a41883b7b2933a58eb/SS%20Readme/homepage2.png" width="300" height="400">
   
 
 # 📁 Struktur Folder Project
