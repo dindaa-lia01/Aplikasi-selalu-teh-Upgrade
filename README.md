@@ -6,19 +6,13 @@ Kelas: SI B'24
 
 # Selalu Teh Catalogue App ˚˖𓍢ִ໋🌷͙֒✧˚.🎀༘⋆
 
-Selalu Teh adalah aplikasi mobile sederhana berbasis Flutter yang dibuat untuk membantu pengelolaan data menu minuman pada toko “Selalu Teh” yang berlokasi di Samarinda, Kalimantan Timur.
+Aplikasi Selalu Teh merupakan aplikasi katalog menu minuman yang dibuat menggunakan framework Flutter. Aplikasi ini menampilkan daftar menu minuman dalam bentuk katalog yang berisi gambar, nama minuman, harga, dan level kemanisan.
 
-Aplikasi ini dirancang sebagai sistem manajemen menu yang memungkinkan pengguna untuk menambahkan, melihat, mengubah, dan menghapus data minuman dengan mudah melalui tampilan yang sederhana dan interaktif. Setiap menu minuman memiliki informasi berupa:
+Aplikasi ini telah terintegrasi dengan Supabase sebagai layanan backend untuk mengelola database menu minuman. Dengan adanya integrasi ini, aplikasi dapat melakukan pengolahan data seperti menambahkan menu baru, menampilkan daftar menu, mengedit data menu, serta menghapus menu dari database.
 
-- Nama minuman
+Selain itu, tampilan menu pada aplikasi ini sudah menggunakan gambar menu minuman yang diambil dari URL, sehingga tampilan katalog terlihat lebih nyata dan menarik dibandingkan sebelumnya yang menggunakan emoji. Dengan adanya gambar menu tersebut, pengguna dapat melihat visual minuman dengan lebih jelas.
 
-- Harga
-
-- Level kemanisan
-
-- Icon/emoji sebagai representasi visual
-
-Tampilan menu disajikan dalam bentuk grid agar terlihat seperti katalog produk, sehingga lebih menarik dan mudah dibaca. Aplikasi ini juga menerapkan konsep Object-Oriented Programming (OOP) dengan menggunakan model data serta pengelolaan state menggunakan StatefulWidget.
+Aplikasi ini juga dilengkapi dengan fitur light mode dan dark mode sehingga tampilan aplikasi dapat menyesuaikan dengan preferensi pengguna.
 
 # ᰔ Tampilan UI
 
@@ -29,22 +23,22 @@ Tampilan menu disajikan dalam bentuk grid agar terlihat seperti katalog produk, 
 
 # ᰔ Fitur Utama
 
-Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampilkan data minuman, Mengedit data minuman yang sudah ada, Menghapus data minuman
+Aplikasi ini berisi 5 fitur utama, yaitu Menambahkan data minuman baru, Menampilkan data minuman, Mengedit data minuman yang sudah ada, Menghapus data minuman, serta Mengatur mode tampilan
 
 - Menambahkan data minuman baru (Create)
 
-  Pengguna dapat menambahkan menu minuman baru dengan mengisi form yang tersedia, seperti nama minuman, harga, level manis, dan ikon. Data yang diinput akan langsung tampil pada halaman utama dengan meng-klik button _(+)_ di sudut kanan bawah.
+  Pengguna dapat menambahkan menu minuman baru dengan mengisi form yang tersedia, seperti nama minuman, harga, level manis, dan gambar dari menu yang tersedia. Data yang diinput akan langsung tampil pada halaman utama dengan meng-klik button _(+)_ di sudut kanan bawah.
 
   <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/571b69759b2224069da0f0a41883b7b2933a58eb/SS%20Readme/button%20create.png" width="300" height="400">
 
-  Melakukan create pada form yang tersedia
+  Mengisi data pada form yang tersedia
 
   <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/e85de5bbf59f8a253acf1f148e5322022b6527c0/SS%20Readme/create.png" width="400" height="600">
 
   Gambar pertama dan kedua menampilkan halaman Tambah Menu dengan contoh proses validasi pada form input. Aplikasi akan menampilkan pesan kesalahan apabila data yang dimasukkan tidak sesuai atau masih kosong, seperti nama harus berupa huruf, harga harus berupa angka, serta setiap kolom wajib diisi. Hal ini bertujuan untuk memastikan data yang dimasukkan pengguna sudah benar sebelum disimpan.
 
   <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/e85de5bbf59f8a253acf1f148e5322022b6527c0/SS%20Readme/error%20handling%20formpage.png" width="400" height="600">
-  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/e85de5bbf59f8a253acf1f148e5322022b6527c0/SS%20Readme/error%20handling%20(2).png" width="400" height="600">
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/e85de5bbf59f8a253acf1f148e5322022b6527c0/SS%20Readme/error%20handling%20(2).png" width="450" height="600">
 
   Jika Create berhasil, maka akan muncul pop up untuk memberi feedback ke pengguna setelah melakukan aksi.
  
@@ -64,9 +58,9 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
 
   Pengguna dapat mengubah data minuman yang sudah ada melalui button _edit_. Data lama akan ditampilkan kembali di form, lalu dapat diperbarui sesuai kebutuhan.
 
-  Sebelum data diupdate, harga awal adalah Rp12.000, namun kita akan melakukan update harga menjadi Rp18.000
+  Pada contoh gambar dibawah ini merupakan data sebelum diupdate. Harga awal adalah Rp12.000, namun kita akan melakukan update harga menjadi Rp18.000
 
-  <img width="400" height="300" src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/b0fbb31b1ca826f009fed27067d4e3876100f60f/SS%20Readme/edit%20red%20velvet.png">
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/b0fbb31b1ca826f009fed27067d4e3876100f60f/SS%20Readme/edit%20red%20velvet.png" width="380" height="500" >
 
   Setelah data harga di update:
   
@@ -74,18 +68,18 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
 
 - Menghapus data minuman (Delete)
 
-  Pengguna dapat menghapus menu minuman dari daftar dengan menekan button _delete_, lalu mengkonfirmasi jika ingin benar-benar menghapus sehingga data tersebut tidak lagi ditampilkan.
+  Pengguna dapat menghapus menu minuman dari daftar dengan menekan button _delete_, lalu muncul pop up untuk mengkonfirmasi jika ingin benar-benar menghapus menu sehingga data tersebut tidak lagi ditampilkan.
 
    <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/50743f5ca1d1d68505895934e53a192870d3b492/SS%20Readme/konfirmasi%20delete.png" width="300" height="400">
 
-- Fitur Dark Mode dan Light Mode
+- Fitur Dark Mode dan Light Mode (Nilai Tambah)
 
   Pada aplikasi ini terdapat fitur untuk mengubah tampilan tema menjadi light mode atau dark mode. Pengguna dapat mengganti tema dengan menekan ikon yang berada di sudut kanan atas pada halaman aplikasi. Ketika ikon tersebut ditekan, tampilan aplikasi akan berubah dari mode terang (light) menjadi mode gelap (dark), atau sebaliknya. Fitur ini memudahkan pengguna menyesuaikan tampilan aplikasi sesuai dengan kenyamanan saat digunakan.
 
   icon saat ingin berpindah ke dark mode
 
   <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/e85de5bbf59f8a253acf1f148e5322022b6527c0/SS%20Readme/ke%20dark%20mode.png" width="300" height="700">
-  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/a15b0ff50669f62b96f88eb867e4fb80546376c5/SS%20Readme/dark.png" width="400" height="700">
+  <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/a15b0ff50669f62b96f88eb867e4fb80546376c5/SS%20Readme/dark.png" width="400" height="500">
 
   Icon saat ingin berpindah ke light mode
 
@@ -94,6 +88,7 @@ Aplikasi ini berisi 4 fitur utama, yaitu Menambahkan data minuman baru, Menampil
   
 
 # 📁 Struktur Folder Project
+```bash
 lib/
 ├── config/
 │   └── supabase_config.dart   # Konfigurasi Supabase
@@ -106,17 +101,18 @@ lib/
 ├── services/
 │   └── drink_service.dart     # Service untuk operasi data minuman
 └── main.dart                  # Entry point aplikasi
+```
 
 Project dibagi menjadi 4 package utama:
 1. config
 
    Folder ini berisi file konfigurasi yang bernama supabase_config.dart yang digunakan untuk menghubungkan aplikasi Flutter dengan database Supabase. Di dalamnya terdapat pengaturan seperti URL Supabase dan API Key yang diambil dari file .env, lalu digunakan untuk menginisialisasi koneksi database agar aplikasi bisa mengakses data.
 
-3. models
+2. models
 
     Folder ini berisi model data yang digunakan dalam aplikasi. File drinks.dart mendefinisikan struktur data untuk menu minuman. Model ini berisi atribut seperti id, name, price, sugarLevel, dan imageUrl. Model ini juga memiliki fungsi untuk mengubah data dari format JSON ke objek Dart dan sebaliknya agar mudah digunakan dalam aplikasi.
     
-4. pages
+3. pages
     
    Folder ini berisi halaman tampilan (UI) yang dilihat dan digunakan oleh pengguna. terdapat beberapa file sebagai berikut:
     
@@ -132,17 +128,17 @@ Project dibagi menjadi 4 package utama:
 
      Halaman utama aplikasi yang menampilkan daftar menu minuman yang diambil dari database Supabase. Pada halaman ini pengguna dapat melihat menu, mengedit data, menghapus data, dan menambah menu baru.
 
-5. services
+4. services
 
    Folder ini berisi logika pengolahan data atau komunikasi dengan database. File drink_service.dart berfungsi untuk menangani operasi CRUD (Create, Read, Update, Delete) terhadap data minuman di database Supabase. Dengan adanya service ini, pengambilan dan pengolahan data menjadi lebih terstruktur dan tidak langsung ditulis di halaman UI.
 
-6. main.dart
+5. main.dart
 
    File ini merupakan entry point atau titik awal saat aplikasi Flutter dijalankan. Di file ini dilakukan inisialisasi Supabase, pengaturan tema aplikasi (light mode dan dark mode), serta menjalankan aplikasi dengan memanggil halaman awal yaitu CoverPage.
    
 # 📌 Widget yang Digunakan
 
-Widget adalah komponen dasar dalam Flutter yang digunakan untuk membangun tampilan dan struktur aplikasi.
+Widget adalah komponen dasar dalam Flutter yang digunakan untuk membangun tampilan dan struktur aplikasi. Berikut adalah beberapa widget yang digunakan di dalam membuat aplikasi ini:
 
 ## 🔹 Struktur Dasar
 
