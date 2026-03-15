@@ -253,7 +253,7 @@ Aplikasi Selalu Teh menggunakan sistem navigasi untuk berpindah dari satu halama
 
 # ᰔ SUPABASE 
 
-### - Tampilan database
+### 1 Tampilan database
 
   Pada gambar pertama ditampilkan tampilan database pada Supabase yang berisi data menu minuman yang digunakan pada aplikasi Selalu Teh. Di dalam tabel tersebut terdapat beberapa data menu seperti Red Velvet, Lemon Green Tea, Teh Susu, dan Strawberry Cheese Cake. Setiap data menu memiliki beberapa informasi pendukung seperti id, name, price, sugar_level, image_url, serta created_at yang digunakan untuk menyimpan detail dari masing-masing menu.
 
@@ -261,7 +261,7 @@ Aplikasi Selalu Teh menggunakan sistem navigasi untuk berpindah dari satu halama
 
   <img alt="image" src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/372af771fb765658f718aa7d9932d06b93d6d25d/SS%20Readme/Database.png" />
 
-### - Tampilan table editor
+### 2 Tampilan table editor
 
    Pada gambar kedua ditampilkan struktur tabel menus melalui fitur Table Editor pada Supabase. Tabel ini digunakan sebagai tempat penyimpanan data menu yang akan digunakan oleh aplikasi Selalu Teh. Di dalam tabel tersebut terdapat beberapa kolom yang berfungsi untuk menyimpan informasi terkait menu minuman. Kolom id dengan tipe data int8 digunakan sebagai identitas unik untuk setiap menu. Kolom name bertipe text digunakan untuk menyimpan nama minuman. Kolom price dengan tipe data int4 digunakan untuk menyimpan harga dari menu tersebut. Selanjutnya terdapat kolom sugar_level bertipe text yang digunakan untuk menyimpan informasi tingkat gula pada minuman.
 
