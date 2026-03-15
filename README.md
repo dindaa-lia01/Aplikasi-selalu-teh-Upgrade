@@ -26,7 +26,7 @@ Tampilan menu disajikan dalam bentuk grid agar terlihat seperti katalog produk, 
 
 <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/b7aeb5c87293f776392ebcf1cace5e5284cb7c5d/Screenshot%202026-03-15%20142453.png" width="400" height="700">
 
-
+<img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/45de71121b8044013f5d59f211e314ccd4914b35/SS%20Readme/dark_mode.png" width="400" height="700">
 
 <img src="https://github.com/dindaa-lia01/Aplikasi-selalu-teh-Upgrade/blob/c48cac87217b83bf33343113b616a6abd03b311f/SS%20Readme/formpage.png" width="400" height="700">
 
